@@ -10,3 +10,7 @@ The following port forwarding rules need to be on the router
 Local 31101 -> External 80
 Local 31100 -> External 443
 ```
+
+## Public Domain Name
+
+A public domain name has been acquired from No-IP, `craigmiller160.ddns.net`. This will be the host of this ingress and all the applications it connects to.

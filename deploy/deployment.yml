@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: cluster-ingress
-          image: localhost:32000/cluster-ingress:1.0.0-beta.17
+          image: localhost:32000/cluster-ingress:1.0.0-beta.19
           ports:
             - containerPort: 443
           livenessProbe:
@@ -34,7 +34,13 @@ spec:
   selector:
     app: cluster-ingress
   ports:
-    - port: 443
+    - name: https
+      port: 443
       targetPort: 443
       nodePort: 31100
+      protocol: TCP
+    - name: http
+      port: 80
+      targetPort: 80
+      nodePort: 31101
       protocol: TCP

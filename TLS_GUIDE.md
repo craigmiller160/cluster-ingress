@@ -20,6 +20,8 @@ sudo certbot certonly --manual
 
 This will first ask for the domain name `craigmiller160.ddns.net`. Then, it'll offer a long, encoded string that has to be placed on the server and returned at the endpoint `/.well-known/acme-challenge/########`.
 
+The Dockerfile is designed to copy the file `./deploy/authcode.txt` to the Nginx server and return it for the ACME challenge. Put the code here. The file will be ignored by Git.
+
 This app has to be redeployed to k8s with this code before proceeding. Please validate that you get the code back from the endpoint, as you only get 5 tries per-hour.
 
 Once it is deployed and ready, click "enter" to proceed. Let's Encrypt will validate the code, and then issue the certificates in these directories on your machine:

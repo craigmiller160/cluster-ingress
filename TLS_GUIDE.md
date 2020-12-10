@@ -40,3 +40,13 @@ There is a directory that is mounted as a k8s volume:
 ```
 
 Simply copy the `fullchain.pem` and `privkey.pem` to this location.
+
+## Renewing Certificates
+
+So I'm not clear how to do this automatically yet. I can't really attempt to renew them because they haven't expired. There is a command to start the renewal process, however I cacn't go forward with it quite yet.
+
+```
+sudo certbot renew
+```
+
+This command is supposed to renew everything tied to my account that is up for renewal. I'm setting a calendar reminder to renew this.

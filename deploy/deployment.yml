@@ -17,6 +17,9 @@ spec:
           image: localhost:32000/cluster-ingress:1.0.0-beta.25
           ports:
             - containerPort: 443
+          volumeMounts:
+            - mountPath: /var/www/cert
+              name: ingress-cert-volume
           livenessProbe:
             httpGet:
               path: /healthcheck
@@ -24,6 +27,10 @@ spec:
               scheme: HTTPS
             initialDelaySeconds: 10
             periodSeconds: 300
+      volumes:
+        - name: ingress-cert-volume
+          hostPath:
+            path: /opt/kubernetes/data/ingress/cert
 ---
 apiVersion: v1
 kind: Service

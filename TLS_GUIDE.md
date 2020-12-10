@@ -15,5 +15,7 @@ sudo snap install --classic certbot
 Then, it's time to generate the certificate. We just want the cert, nothing fancy:
 
 ```
-sudo certbot certonly
+sudo certbot certonly --manual
 ```
+
+TODO add instructions on how to setup the file

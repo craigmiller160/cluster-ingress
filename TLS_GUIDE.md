@@ -39,4 +39,4 @@ There is a directory that is mounted as a k8s volume:
 /opt/data/ingress/cert
 ```
 
-Simply copy the `fullchain.pem` and `privkey.pem` to this location. Rename `fullchain.pem` to `certificate.pem`. Rename `privkey.pem` to `key.pem`.
+Simply copy the `fullchain.pem` and `privkey.pem` to this location.

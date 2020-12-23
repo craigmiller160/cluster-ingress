@@ -43,7 +43,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY index.html /var/www
 COPY authcode.txt /var/www
 #RUN ls /usr/src/nginx-${NGINX_VERSION}/objs
-COPY --from=build /usr/src/nginx-${NGINX_VERSION}/objs/* /usr/lib/nginx/modules/
+COPY --from=build /usr/src/nginx-${NGINX_VERSION}/objs/ngx_http_headers_more_filter_module.so /usr/lib/nginx/modules/
 
 ENTRYPOINT ["nginx","-g","daemon off;"]
 

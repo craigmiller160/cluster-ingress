@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: cluster-ingress
-          image: localhost:32000/cluster-ingress:1.0.2.1
+          image: localhost:32000/cluster-ingress:1.0.3
           ports:
             - containerPort: 443
           volumeMounts:

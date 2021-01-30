@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: cluster-ingress
-          image: localhost:32000/cluster-ingress:1.1.0-beta.1
+          image: craigmiller160.ddns.net:30004/cluster-ingress:1.1.0-beta.1
           ports:
             - containerPort: 443
           volumeMounts:

@@ -38,7 +38,7 @@ Once it is deployed and ready, click "enter" to proceed. Let's Encrypt will vali
 There is a directory that is mounted as a k8s volume:
 
 ```
-/opt/data/ingress/cert
+/opt/kubernetes/data/ingress/cert
 ```
 
 Simply copy the `fullchain.pem` and `privkey.pem` to this location.

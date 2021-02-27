@@ -4,13 +4,16 @@ A simple, homemade ingress for my k8s cluster, because I can't seem to wrap my h
 
 ## Setup
 
-The following directory is mounted as a k8s volume and needs to exist:
+The following directories are mounted as k8s volumes and need to exist:
 
 ```
-/opt/data/ingress/cert
+/opt/kubernetes/data/ingress/cert
+/opt/kubernetes/data/ingress/authcode
 ```
 
-TLS certs need to go in this directory. If you haven't setup public ones yet, use the self-signed certs in this project.
+TLS certs need to go in the `cert` directory. They should be the Let's Encrypt certs from the TLS guide.
+
+The authcode used for validating with Let's Encrypt goes in the `authcode` directory.
 
 ## Port Forwarding
 

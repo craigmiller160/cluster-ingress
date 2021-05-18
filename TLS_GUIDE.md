@@ -12,6 +12,12 @@ Certbot is a terminal application provided by Let's Encrypt. It can be installed
 sudo snap install --classic certbot
 ```
 
+Then, you need to register with certbot before anything else:
+
+```
+sudo certbot register
+```
+
 Then, it's time to generate the certificate. We just want the cert, nothing fancy:
 
 ```

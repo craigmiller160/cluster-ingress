@@ -15,7 +15,7 @@ sudo ln -s /home/craig/authcode /opt/kubernetes/data/ingress/authcode
 
 Keep in mind if you change this at all while the ingress is running, it needs to be restarted.
 
-## Use Certbot
+## Setup Certbot
 
 Certbot is a terminal application provided by Let's Encrypt. It can be installed on the Ubuntu-derived version of Linux using snap:
 
@@ -29,7 +29,13 @@ Then, you need to register with certbot before anything else:
 sudo certbot register
 ```
 
-Then, it's time to generate the certificate. We just want the cert, nothing fancy:
+## Use Certbot Script
+
+I wrote a helpful script for certbot, `certbot-manual`, to help with running certbot manual commands. It should automate the creation/renewel process.
+
+## Use Certbot Directly
+
+This is how to directly use certbot without the script to generate the certs.
 
 ```
 sudo certbot certonly --manual

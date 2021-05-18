@@ -4,6 +4,17 @@ This is a simple guide to setting up a legit, valid, public TLS cert for the ing
 
 It's very important that the app is running and the public domain is setup properly. If not, this will fail.
 
+## Setup Directory
+
+Need a directory that NodeJS can write to for the automated script to work. Create the following directory and symlink it.
+
+```
+mkdir ~/authcode
+sudo ln -s /home/craig/authcode /opt/kubernetes/data/ingress/authcode
+```
+
+Keep in mind if you change this at all while the ingress is running, it needs to be restarted.
+
 ## Use Certbot
 
 Certbot is a terminal application provided by Let's Encrypt. It can be installed on the Ubuntu-derived version of Linux using snap:

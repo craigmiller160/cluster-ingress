@@ -2,3 +2,4 @@
 .idea
 *.iml
 authcode.txt
+deploy/deployment.temp.yml
